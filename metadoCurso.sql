@@ -25,3 +25,26 @@ from customer cus
 join payment pay
 	on cus.customer_id = pay.payment_id
     order by pay.amount asc
+    
+-------------------------------------------------------------------------------------
+USE CARROS;
+create table marcas (
+	id int not null auto_increment,
+    nome_marca varchar(255) not null,
+    origem varchar(255) not null,
+    primary key (id)
+);
+
+alter table marcas add origem varchar(255)
+
+
+create table iventario(
+	id int not null auto_increment,
+    modelo varchar(255) not null,
+    transmissao varchar(255) not null,
+    motor varchar(255) not null,
+    combustivel varchar(255) not null,
+    marcas_id int not null,
+    primary key (id),
+    foreing key (marcas_id) references marcas(id)
+);
