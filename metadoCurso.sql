@@ -48,3 +48,15 @@ create table iventario(
     primary key (id),
     foreing key (marcas_id) references marcas(id)
 );
+
+
+-----------------------------------------------------------------------
+use carros;
+insert into marcas (nome_marca, origem)
+values
+("opel", "Alemanhã"),
+("reanault", "França"),
+("Ferrari", "Alemanhã"),
+("Seat", "Espanha"),
+("Fiat", "Italia");
+
